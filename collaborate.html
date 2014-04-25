@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>collaborate</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/6b348b90-50a1-4ea8-b8ea-57b9bba06bb3.js"></script>
+</head>
+<body class="body collaborate clearfix cbp-spmenu-push">
+  <!--http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/-->
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <a href="index.html">Home</a>
+    <a href="curate.html">Curate</a>
+    <a href="supply.html">Supply</a>
+    <a href="collaborate.html">Collaborate</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+  <div>
+    <header class="_container _container-5">
+      <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
+      <button class="signin signin-4">Sign In</button>
+      <button class="menu" id="showLeftPush">Menu</button>
+      <div class="background background-10"></div>
+    </header>
+    <div class="scrollblock scrollblock-9">
+      <p class="valueprop valueprop-6">Collaborate With Boutiques</p>
+      <p class="valuepropsub valuepropsub-3">Make your inventory suprlus or deficit problems a thing of the past by working with a network of top boutiques located throughout the US.</p>
+      <button class="signinbutton signinbutton-4">Sign In</button>
+      <button onClick="window.location='signup.html';" class="getinvited getinvited-4 js-get-invited" type="submit">Sign Up</button>
+      <div class="background background-11"></div>
+    </div>
+    <div class="scrollblock scrollblock-10">
+      <p class="heading heading-3">Trunkit's Boutique Partners</p>
+      <img class="map" src="images/Trunkit Boutique Partners Map-730x454.png" data-rimage data-src="images/Trunkit Boutique Partners Map-730x454.png" data-srcat2x="images/Trunkit Boutique Partners Map-730x454@2x.png">
+      <div class="background background-13"></div>
+    </div>
+    <div class="scrollblock scrollblock-12">
+      <div class="stats">
+        <p class="definition definition-1">STATES</p>
+        <div class="amount amount-1">17</div>
+        <p class="definition definition-2">BOUTIQUES</p>
+        <p class="amount amount-2">28</p>
+      </div>
+      <p class="heading heading-11">
+        Aquamarine - Lewes, DE<br>
+        The Blues Jean Bar - Boston, MA<br>
+        The Blues Jean Bar - Chicago, IL<br>
+        The Blues Jean Bar - Dallas, TX<br>
+        The Blues Jean Bar - Denver, CO<br>
+        The Blues Jean Bar - Greenwich, CT<br>
+        The Blues Jean Bar - New Orleans, LA<br>
+        The Blues Jean Bar - San Francisco, CA<br>
+        The Blues Jean Bar - San Jose, CA<br>
+        The Blues Jean Bar - Santa Monica, CA<br>
+        The Blues Jean Bar - Sun Valley, ID<br>
+        The Blues Jean Bar - Vail, CO<br>
+        Bump - Brooklyn, NY<br>
+        Canopy Blue - Seattle, WA<br>
+        Caruso Caruso - Birmingham, MI<br>
+        Cedar & Hyde Mercantile - Boulder, CO<br>
+        Ecco Boutique - Burlington, VT<br>
+        Friend - New Orleans, LA<br>
+        Island Farm - Boulder, CO<br>
+        Pink - Richmond, VA<br>
+        Pink Lagoon - La Jolla, CA<br>
+        Pink Lagoon - Solana Beach, CA<br>
+        Retail Therapy - Crested Butte, CO<br>
+        Rica - La Jolla, CA<br>
+        Terra - Jackson, WY<br>
+        Therapy - Auburn, AL<br>
+        Vert & Vogue - Durham, NC<br>
+        Weekends - Boulder, CO<br>
+      </p>
+      <div class="background background-16"></div>
+    </div>
+    <footer class="_container _container-12 clearfix">
+      <div class="background background-21"></div>
+      <p class="contact contact-1">Twitter: @teamtrunkit</p>
+      <p class="contact contact-6">Email: Team@Trunkit.com</p>
+    </footer>
+  </div>
+
+  <script src="js/jquery-min.js"></script>
+  <script src="js/collaborate.js"></script>
+  <script src="js/rimages.js"></script>
+  <script src="js/classie.js"></script>
+  <script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+      showLeftPush = document.getElementById( 'showLeftPush' ),
+      body = document.body;
+
+    
+    showLeftPush.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( body, 'cbp-spmenu-push-toright' );
+      classie.toggle( menuLeft, 'cbp-spmenu-open' );
+      disableOther( 'showLeftPush' );
+    };
+  
+
+    function disableOther( button ) {
+      if( button !== 'showLeftPush' ) {
+        classie.toggle( showLeftPush, 'disabled' );
+      }
+    }
+
+    //http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/comment-page-3/#comments
+    // define the body.onclick handler
+    function bodyClickHandler(evt) {
+    // exit if a button was clicked
+    if (isButton(evt.toElement))
+    return;
+    // get the active button
+    var activeButton = document.querySelector('button.active');
+    // if the active button exists, trigger activeButton.onclick
+    if (activeButton != null)
+    activeButton.onclick();
+    }
+    // assign the body.onclick handler
+    document.querySelector('body').onclick = bodyClickHandler;
+    // helper: check if elem is a button
+    function isButton(elem) {
+    return (elem.toString() == '[object HTMLButtonElement]');
+    }
+  </script>
+</body>
+</html>

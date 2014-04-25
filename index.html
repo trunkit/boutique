@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/6b348b90-50a1-4ea8-b8ea-57b9bba06bb3.js"></script>
+</head>
+<body class="body index clearfix cbp-spmenu-push">
+  <!--http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/-->
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <a href="index.html">Home</a>
+    <a href="curate.html">Curate</a>
+    <a href="supply.html">Supply</a>
+    <a href="collaborate.html">Collaborate</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+  <div>
+    <header class="_container _container-1">
+      <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
+      <button class="signin signin-1">Sign In</button>
+      <button class="menu" id="showLeftPush">Menu</button>
+      <div class="background background-2"></div>
+    </header>
+    <div class="scrollblock scrollblock-1">
+      <button onClick="window.location='signup.html';" class="getinvited getinvited-1 js-get-invited" type="submit">Sign Up</button>
+      <button class="signinbutton signinbutton-1">Sign In</button>
+      <div class="tagline">The end of your inventory management problems.</div>
+      <div class="background background-1"></div>
+    </div>
+    <div class="scrollblock scrollblock-4">
+      <div class="background background-5"></div>
+      <div class="container _container container-1">
+        <div class="valueprop valueprop-3">
+          <p class="valuetitle valuetitle-1">Offer additional inventory risk free</p>
+          <p class="moreinfo moreinfo-1">Always insure your customers walk out happy. Carry additional inventory online without buying, stocking, or taking any risk of any kind.</p>
+          <div class="learnmorearrow learnmorearrow-1">
+            <img class="arrow" src="images/arrow-5x6-2.png" data-rimage data-src="images/arrow-5x6-2.png" data-srcat2x="images/arrow-5x6-2@2x.png">
+            <button onClick="window.location='curate.html';" class="learnmore">Learn More</button>
+          </div>
+        </div>
+        <div class="valueprop valueprop-4">
+          <p class="moreinfo moreinfo-2">List inventory that isn’t selling locally and instantly tap into other boutiques’ customers on a national scale.</p>
+          <p class="valuetitle valuetitle-2">Sell into New Fashion Markets</p>
+          <div class="learnmorearrow learnmorearrow-2">
+            <img class="arrow" src="images/arrow-5x6-1.png" data-rimage data-src="images/arrow-5x6-1.png" data-srcat2x="images/arrow-5x6-1@2x.png">
+            <button onClick="window.location='supply.html';" class="learnmore">Learn More</button>
+          </div>
+        </div>
+        <div class="valueprop valueprop-5">
+          <p class="valuetitle valuetitle-3">Collaborate with boutiques</p>
+          <p class="moreinfo moreinfo-3">Make your inventory suprlus or deficit problems a thing of the past by working with a network of top boutiques located throughout the US.</p>
+          <div class="learnmorearrow learnmorearrow-3">
+            <img class="arrow" src="images/arrow-5x6.png" data-rimage data-src="images/arrow-5x6.png" data-srcat2x="images/arrow-5x6@2x.png">
+            <button onClick="window.location='collaborate.html';" class="learnmore">Learn More</button>
+          </div>
+        </div>
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+      </div>
+    </div>
+    <div class="scrollblock scrollblock-11">
+      <div class="container _container container-2">
+        <p class="heading">Trunkit's Featured Boutique Partners</p>
+        <div class="collage">
+          <div class="collagepic collagepic-1"><a href="http://www.terrajh.com/" class="linkto" target="_blank"><span></span></a></div>
+          <div class="collagepic collagepic-2"><a href="http://weekendsboulder.com/" class="linkto" target="_blank"><span></span></a></div>
+          <div class="collagepic collagepic-3"><a href="http://vertandvogue.com/" class="linkto" target="_blank"><span></span></a></div>
+          <div class="collagepic collagepic-4"><a href="http://www.shoptherapyauburn.com/" class="linkto" target="_blank"><span></span></a></div>
+          <div class="collagepic collagepic-5"><a href="http://thebluesjeanbar.com/" class="linkto" target="_blank"><span></span></a></div>
+          <div class="collagepic collagepic-6"><a href="http://www.cedarandhyde.com/" class="linkto" target="_blank"><span></span></a></div>
+        </div>
+      </div>
+      <div class="background background-17"></div>
+    </div>
+    <footer class="_container _container-13 clearfix">
+      <div class="background background-22"></div>
+      <p class="contact contact-1">Twitter: @teamtrunkit</p>
+      <p class="contact contact-6">Email: Team@Trunkit.com</p>
+    </footer>
+  </div>
+
+  <script src="js/jquery-min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/rimages.js"></script>
+  <script src="js/classie.js"></script>
+  <script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+      showLeftPush = document.getElementById( 'showLeftPush' ),
+      body = document.body;
+
+    
+    showLeftPush.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( body, 'cbp-spmenu-push-toright' );
+      classie.toggle( menuLeft, 'cbp-spmenu-open' );
+      disableOther( 'showLeftPush' );
+    };
+  
+
+    function disableOther( button ) {
+      if( button !== 'showLeftPush' ) {
+        classie.toggle( showLeftPush, 'disabled' );
+      }
+    }
+
+    var controller;
+      $(document).ready(function($) {
+        // init controller
+        controller = new ScrollMagic();
+      });
+
+    //http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/comment-page-3/#comments
+    // define the body.onclick handler
+    function bodyClickHandler(evt) {
+    // exit if a button was clicked
+    if (isButton(evt.toElement))
+    return;
+    // get the active button
+    var activeButton = document.querySelector('button.active');
+    // if the active button exists, trigger activeButton.onclick
+    if (activeButton != null)
+    activeButton.onclick();
+    }
+    // assign the body.onclick handler
+    document.querySelector('body').onclick = bodyClickHandler;
+    // helper: check if elem is a button
+    function isButton(elem) {
+    return (elem.toString() == '[object HTMLButtonElement]');
+    }
+  </script>
+</body>
+</html>

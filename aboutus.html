@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>aboutus</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles2.css">
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/6b348b90-50a1-4ea8-b8ea-57b9bba06bb3.js"></script>
+</head>
+<body class="body aboutus clearfix cbp-spmenu-push onlyonce">
+  <!--http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/-->
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <a href="index.html">Home</a>
+    <a href="curate.html">Curate</a>
+    <a href="supply.html">Supply</a>
+    <a href="collaborate.html">Collaborate</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+  <div>
+    <header class="_container _container-1">
+      <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
+      <button class="signin signin-a">Sign In</button>
+      <button class="menu" id="showLeftPush">Menu</button>
+      <div class="background background-b"></div>
+    </header>
+    <!--http://tympanus.net/codrops/2013/11/14/animated-opening-type/-->
+    <!--<div class="container-1a">
+      <div class="component">
+        <ul class="grid">
+          <li class="ot-letter-left"><span data-letter="A">A</span></li>
+          <li class="ot-letter-left"><span data-letter="B">B</span></li>
+          <li class="ot-letter-left"><span data-letter="O">O</span></li>
+          <li class="ot-letter-left"><span data-letter="U">U</span></li>
+          <li class="ot-letter-left"><span data-letter="T">T</span></li>
+          <li class="ot-letter-left"><span data-letter="U">U</span></li>
+          <li class="ot-letter-left"><span data-letter="S">S</span></li>
+        </ul>
+      </div>
+    </div>-->
+    <div class="scrollblock scrollblock-a">
+      <div class="text text-a">We started Trunkit with the core belief that by providing a platform for boutiques to collaborate with one another, they could finally make their problems involving inventory surplus or deficict a thing of the past.</div>
+      <div class="background background-c"></div>
+    </div>
+    <div class="scrollblockb scrollblock-b">
+      <p class="text text-b">MEET THE FOUNDERS</p>
+      <div class="container _container container-a">
+        <div class="container _container container-b">
+          <div class="container _container container-c">
+            <div class="container _container container-h"><a href="mailto:sam@trunkit.com" class="linkto" target="_blank"></a></div>
+            <div class="container _container container-i"><a href="https://twitter.com/sfelsey" class="linkto" target="_blank"></a></div>
+          </div>
+          <p class="text text-c">Sam Felsenthal</p>
+          <img class="image image-e" src="images/sam_exec2-172x210.png" data-rimage data-src="images/sam_exec2-172x210.png" data-srcat2x="images/sam_exec2-172x210@2x.png">
+        </div>
+        <div class="container _container container-f">
+          <div class="container _container container-g">
+            <div class="container _container container-h"><a href="mailto:max@trunkit.com" class="linkto" target="_blank"></a></div>
+            <div class="container _container container-i"><a href="https://twitter.com/maxjaffee" class="linkto" target="_blank"></a></div>
+          </div>
+          <p class="text text-d">Max Jaffee</p>
+          <img class="image image-j" src="images/max_exec-164x210.png" data-rimage data-src="images/max_exec-164x210.png" data-srcat2x="images/max_exec-164x210@2x.png">
+        </div>
+      </div>
+      <div class="background background-d"></div>
+    </div>
+    <div class="scrollblock scrollblock-c">
+      <p class="text text-e">Trunkit is proud to be based in Boulder, Colorado.</p>
+      <img class="image" src="images/logo_black_text_transparent_background_LARGE-400x189.png" data-rimage data-src="images/logo_black_text_transparent_background_LARGE-400x189.png" data-srcat2x="images/logo_black_text_transparent_background_LARGE-400x189@2x.png">
+      <div class="element element-a"></div>
+      <div class="element element-b"></div>
+    </div>
+    <footer class="_container _container-13 clearfix">
+      <div class="background background-22"></div>
+      <p class="contact contact-1">Twitter: @teamtrunkit</p>
+      <p class="contact contact-6">Email: Team@Trunkit.com</p>
+    </footer>
+  </div>
+
+  <script src="js/jquery-min.js"></script>
+  <script src="js/aboutus.js"></script>
+  <script src="js/rimages.js"></script>
+  <script src="js/classie.js"></script>
+  <script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+      showLeftPush = document.getElementById( 'showLeftPush' ),
+      body = document.body;
+
+    
+    showLeftPush.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( body, 'cbp-spmenu-push-toright' );
+      classie.toggle( menuLeft, 'cbp-spmenu-open' );
+      disableOther( 'showLeftPush' );
+    };
+  
+
+    function disableOther( button ) {
+      if( button !== 'showLeftPush' ) {
+        classie.toggle( showLeftPush, 'disabled' );
+      }
+    }
+
+    //http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/comment-page-3/#comments
+    // define the body.onclick handler
+    function bodyClickHandler(evt) {
+    // exit if a button was clicked
+    if (isButton(evt.toElement))
+    return;
+    // get the active button
+    var activeButton = document.querySelector('button.active');
+    // if the active button exists, trigger activeButton.onclick
+    if (activeButton != null)
+    activeButton.onclick();
+    }
+    // assign the body.onclick handler
+    document.querySelector('body').onclick = bodyClickHandler;
+    // helper: check if elem is a button
+    function isButton(elem) {
+    return (elem.toString() == '[object HTMLButtonElement]');
+    }
+  </script>
+</body>
+</html>

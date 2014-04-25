@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>signup</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/6b348b90-50a1-4ea8-b8ea-57b9bba06bb3.js"></script>
+</head>
+<body class="body signup clearfix cbp-spmenu-push">
+  <!--http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/-->
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <a href="index.html">Home</a>
+    <a href="curate.html">Curate</a>
+    <a href="supply.html">Supply</a>
+    <a href="collaborate.html">Collaborate</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+  <header class="_container _container-1">
+    <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
+    <button class="signin signin-5">Sign In</button>
+    <button class="menu" id="showLeftPush">Menu</button>
+    <div class="background background-12"></div>
+  </header>
+    <div>
+    <div class="heading">
+      <p>Fill out the sign up form below and a member from the Trunkit team will be in touch. </p>
+    </div>
+    <form class="_container clearfix">
+      <input class="entry" name="NAME" placeholder="NAME" type="text">
+      <input class="entry entry-2" name="EMAIL" placeholder="EMAIL" type="email">
+      <input class="entry entry-3" name="PHONE" placeholder="PHONE" type="text">
+      <input class="entry entry-4" name="BOUTIQUE NAME" placeholder="BOUTIQUE NAME" type="text">
+      <input class="entry entry-5" name="CITY" placeholder="CITY" type="text">
+      <select class="entry" name="STATE">
+        <option value="STATE">STATE</option>
+        <option value="Alabama">Alabama</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Arizona">Arizona</option>
+        <option value="Arkansas">Arkansas</option>
+        <option value="California">California</option>
+        <option value="Colorado">Colorado</option>
+        <option value="Connecticut">Connecticut</option>
+        <option value="Delaware">Delaware</option>
+        <option value="Florida">Florida</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Hawaii">Hawaii</option>
+        <option value="Idaho">Idaho</option>
+        <option value="Illinois">Illinois</option>
+        <option value="Indiana">Indiana</option>
+        <option value="Iowa">Iowa</option>
+        <option value="Kansas">Kansas</option>
+        <option value="Kentucky">Kentucky</option>
+        <option value="Lousiana">Lousiana</option>
+        <option value="Maine">Maine</option>
+        <option value="Maryland">Maryland</option>
+        <option value="Massachusetts">Massachusetts</option>
+        <option value="Michigan">Michigan</option>
+        <option value="Minnesota">Minnesota</option>
+        <option value="Mississippi">Mississippi</option>
+        <option value="Missouri">Missouri</option>
+        <option value="Montana">Montana</option>
+        <option value="Nebraska">Nebraska</option>
+        <option value="Nevada">Nevada</option>
+        <option value="New Hampshire">New Hampshire</option>
+        <option value="New Jersey">New Jersey</option>
+        <option value="New Mexico">New Mexico</option>
+        <option value="New York">New York</option>
+        <option value="North Carolina">North Carolina</option>
+        <option value="North Dakota">North Dakota</option>
+        <option value="Ohio">Ohio</option>
+        <option value="Oklahoma">Oklahoma</option>
+        <option value="Oregon">Oregon</option>
+        <option value="Pennsylvania">Pennsylvania</option>
+        <option value="Rhode Island">Rhode Island</option>
+        <option value="South Carolina">South Carolina</option>
+        <option value="South Dakota">South Dakota</option>
+        <option value="Tennessee">Tennessee</option>
+        <option value="Texas">Texas</option>
+        <option value="Utah">Utah</option>
+        <option value="Vermont">Vermont</option>
+        <option value="Virginia">Virginia</option>
+        <option value="Washington">Washington</option>
+        <option value="West Virginia">West Virginia</option>
+        <option value="Wisconsin">Wisconsin</option>
+        <option value="Wyoming">Wyoming</option>
+      </select>
+      <button class="getinvited" type="submit">Sign Up</button>
+    </form>
+    <footer class="_container _container-9 clearfix">
+      <div class="background background-18"></div>
+      <p class="contact contact-1">Twitter: @teamtrunkit</p>
+      <p class="contact contact-6">Email: Team@Trunkit.com</p>
+    </footer>
+  </div>
+  <script src="js/jquery-min.js"></script>
+  <script src="js/signup.js"></script>
+  <script src="js/rimages.js"></script>
+  <script src="js/classie.js"></script>
+  <script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+      showLeftPush = document.getElementById( 'showLeftPush' ),
+      body = document.body;
+
+    
+    showLeftPush.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( body, 'cbp-spmenu-push-toright' );
+      classie.toggle( menuLeft, 'cbp-spmenu-open' );
+      disableOther( 'showLeftPush' );
+    };
+  
+
+    function disableOther( button ) {
+      if( button !== 'showLeftPush' ) {
+        classie.toggle( showLeftPush, 'disabled' );
+      }
+    }
+
+    //http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/comment-page-3/#comments
+    // define the body.onclick handler
+    function bodyClickHandler(evt) {
+    // exit if a button was clicked
+    if (isButton(evt.toElement))
+    return;
+    // get the active button
+    var activeButton = document.querySelector('button.active');
+    // if the active button exists, trigger activeButton.onclick
+    if (activeButton != null)
+    activeButton.onclick();
+    }
+    // assign the body.onclick handler
+    document.querySelector('body').onclick = bodyClickHandler;
+    // helper: check if elem is a button
+    function isButton(elem) {
+    return (elem.toString() == '[object HTMLButtonElement]');
+    }
+  </script>
+</body>
+</html>

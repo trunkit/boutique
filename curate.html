@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>curate</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/6b348b90-50a1-4ea8-b8ea-57b9bba06bb3.js"></script>
+</head>
+<body class="body curate clearfix cbp-spmenu-push">
+  <!--http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/-->
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <a href="index.html">Home</a>
+    <a href="curate.html">Curate</a>
+    <a href="supply.html">Supply</a>
+    <a href="collaborate.html">Collaborate</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+  <div>
+    <header class="_container _container-3">
+      <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
+      <button class="signin signin-3">Sign In</button>
+      <button class="menu" id="showLeftPush">Menu</button>
+      <div class="background background-7"></div>
+    </header>
+    <div class="scrollblock scrollblock-3">
+      <button class="signinbutton signinbutton-2">Sign In</button>
+      <button onClick="window.location='signup.html';" class="getinvited getinvited-2 js-get-invited" type="submit">Sign Up</button>
+      <p class="valueprop valueprop-2">Offer additional inventory risk free </p>
+      <div class="valuepropsub valuepropsub-2">Always insure your customers walk out happy. Carry additional inventory online without buying, stocking, or taking any risk of any kind.</div>
+      <div class="background background-4"></div>
+    </div>
+    <div class="scrollblock scrollblock-6">
+      <p class="text text-2">Always have an answer to the “I wish you had it in my size” or “I didn’t find anything I liked today” statements by tapping into inventory from other boutiques.</p>
+      <div class="background background-9"></div>
+    </div>
+    <div class="scrollblock scrollblock-8">
+      <p class="heading heading-2">How it works</p>
+      <div class="step step-2">
+        <img class="computer" src="images/Mac1a-547x329.png" data-rimage data-src="images/Mac1a-547x329.png" data-srcat2x="images/Mac1a-547x329@2x.png">
+        <div class="instruction instruction-2">
+          <p class="text text-4">Search for an item that you would like to carry virtually online. Search by brand, other boutiques, or item type.</p>
+          <div class="number number-2 clearfix">
+            <div class="box box-2"></div>
+            <p class="numbertext numbertext-2">1</p>
+          </div>
+        </div>
+      </div>
+      <div class="step step-4">
+        <img class="computer" src="images/Mac2a-547x329.png" data-rimage data-src="images/Mac2a-547x329.png" data-srcat2x="images/Mac2a-547x329@2x.png">
+        <div class="instruction instruction-4">
+          <p class="text text-6">Click "Support" for any items that you’d like to carry.</p>
+          <div class="number number-4 clearfix">
+            <div class="box box-4"></div>
+            <p class="numbertext numbertext-4">2</p>
+          </div>
+        </div>
+      </div>
+      <div class="step step-6">
+        <img class="computer" src="images/Mac3a-547x329.png" data-rimage data-src="images/Mac3a-547x329.png" data-srcat2x="images/Mac3a-547x329@2x.png">
+        <div class="instruction instruction-6">
+          <p class="text text-8">Any items you’ve chosen to support are shown to your customers as complementary inventory exclusively offered online on your custom Trunkit profile.</p>
+          <div class="number number-6 clearfix">
+            <div class="box box-6"></div>
+            <p class="numbertext numbertext-6">3</p>
+          </div>
+        </div>
+      </div>
+      <div class="background background-15"></div>
+    </div>
+    <footer class="_container _container-11 clearfix">
+      <div class="background background-20"></div>
+      <p class="contact contact-1">Twitter: @teamtrunkit</p>
+      <p class="contact contact-6">Email: Team@Trunkit.com</p>
+    </footer>
+  </div>
+
+  <script src="js/jquery-min.js"></script>
+  <script src="js/curate.js"></script>
+  <script src="js/rimages.js"></script>
+  <script src="js/classie.js"></script>
+  <script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+      showLeftPush = document.getElementById( 'showLeftPush' ),
+      body = document.body;
+
+    
+    showLeftPush.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( body, 'cbp-spmenu-push-toright' );
+      classie.toggle( menuLeft, 'cbp-spmenu-open' );
+      disableOther( 'showLeftPush' );
+    };
+  
+
+    function disableOther( button ) {
+      if( button !== 'showLeftPush' ) {
+        classie.toggle( showLeftPush, 'disabled' );
+      }
+    }
+    //http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/comment-page-3/#comments
+    // define the body.onclick handler
+    function bodyClickHandler(evt) {
+    // exit if a button was clicked
+    if (isButton(evt.toElement))
+    return;
+    // get the active button
+    var activeButton = document.querySelector('button.active');
+    // if the active button exists, trigger activeButton.onclick
+    if (activeButton != null)
+    activeButton.onclick();
+    }
+    // assign the body.onclick handler
+    document.querySelector('body').onclick = bodyClickHandler;
+    // helper: check if elem is a button
+    function isButton(elem) {
+    return (elem.toString() == '[object HTMLButtonElement]');
+    }
+  </script>
+</body>
+</html>

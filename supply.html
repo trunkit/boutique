@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>supply</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/6b348b90-50a1-4ea8-b8ea-57b9bba06bb3.js"></script>
+</head>
+<body class="body supply clearfix cbp-spmenu-push">
+  <!--http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/-->
+  <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <a href="index.html">Home</a>
+    <a href="curate.html">Curate</a>
+    <a href="supply.html">Supply</a>
+    <a href="collaborate.html">Collaborate</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+  <div>
+    <header class="_container _container-1">
+      <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
+      <button class="signin signin-2">Sign In</button>
+      <button class="menu" id="showLeftPush">Menu</button>
+      <div class="background background-6"></div>
+    </header>
+    <div class="scrollblock scrollblock-2">
+      <p class="valueprop valueprop-1">Sell into New Fashion Markets<br></p>
+      <p class="valuepropsub valuepropsub-1">List inventory that isn’t selling locally and instantly tap into other boutiques’ customers on a national scale.</p>
+      <button class="signinbutton signinbutton-3">Sign In</button>
+      <button onClick="window.location='signup.html';" class="getinvited getinvited-3 js-get-invited" type="submit">Sign Up</button>
+      <div class="background background-3"></div>
+    </div>
+    <div class="scrollblock scrollblock-5">
+      <p class="text text-1">Be certain that the inventory you buy will sell at the intended retail price.<br></p>
+      <div class="background background-8"></div>
+    </div>
+    <div class="scrollblock scrollblock-7">
+      <p class="heading heading-1">How it works</p>
+      <div class="step step-1">
+        <img class="computer" src="images/compform.png">
+        <div class="instruction instruction-1">
+          <p class="text text-3">List any items that aren't selling locally. Simply enter the item details, the number of sizes, and add pictures.</p>
+          <div class="number number-1 clearfix">
+            <div class="box box-1"></div>
+            <div class="numbertext numbertext-1">1</div>
+          </div>
+        </div>
+      </div>
+      <div class="step step-3">
+        <img class="computer" src="images/compquant.png">
+        <div class="instruction instruction-3">
+          <p class="text text-5">Adjust the quantity of your inventory listed online with the click of a button.</p>
+          <div class="number number-3 clearfix">
+            <div class="box box-3"></div>
+            <div class="numbertext numbertext-3">2</div>
+          </div>
+        </div>
+      </div>
+      <div class="step step-5">
+        <img class="computer" src="images/supplycommission.png">
+        <div class="instruction instruction-5">
+          <p class="text text-7">Benefit from the help of other boutiques selling your inventory to their customers. Receive 82% of the full retail price.</p>
+          <div class="number number-5 clearfix">
+            <div class="box box-5"></div>
+            <div class="numbertext numbertext-5">3</div>
+          </div>
+        </div>
+      </div>
+      <div class="background background-14"></div>
+    </div>
+    <footer class="_container _container-10 clearfix">
+      <div class="background background-19"></div>
+      <p class="contact contact-1">Twitter: @teamtrunkit</p>
+      <p class="contact contact-6">Email: Team@Trunkit.com</p>
+    </footer>
+  </div>
+
+  <script src="js/jquery-min.js"></script>
+  <script src="js/supply.js"></script>
+  <script src="js/rimages.js"></script>
+  <script src="js/classie.js"></script>
+  <script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+      showLeftPush = document.getElementById( 'showLeftPush' ),
+      body = document.body;
+
+    
+    showLeftPush.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( body, 'cbp-spmenu-push-toright' );
+      classie.toggle( menuLeft, 'cbp-spmenu-open' );
+      disableOther( 'showLeftPush' );
+    };
+  
+
+    function disableOther( button ) {
+      if( button !== 'showLeftPush' ) {
+        classie.toggle( showLeftPush, 'disabled' );
+      }
+    }
+
+    //http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/comment-page-3/#comments
+    // define the body.onclick handler
+    function bodyClickHandler(evt) {
+    // exit if a button was clicked
+    if (isButton(evt.toElement))
+    return;
+    // get the active button
+    var activeButton = document.querySelector('button.active');
+    // if the active button exists, trigger activeButton.onclick
+    if (activeButton != null)
+    activeButton.onclick();
+    }
+    // assign the body.onclick handler
+    document.querySelector('body').onclick = bodyClickHandler;
+    // helper: check if elem is a button
+    function isButton(elem) {
+    return (elem.toString() == '[object HTMLButtonElement]');
+    }
+  </script>
+</body>
+</html>
