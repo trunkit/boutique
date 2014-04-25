@@ -21,7 +21,7 @@
   </nav>
   <header class="_container _container-1">
     <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
-    <button class="signin signin-5">Sign In</button>
+    <a class="signin signin-5" href="https://beta.trunkit.com/users/sign_in" target="_target">Sign In</a>
     <button class="menu" id="showLeftPush">Menu</button>
     <div class="background background-12"></div>
   </header>
@@ -30,13 +30,13 @@
       <p>Fill out the sign up form below and a member from the Trunkit team will be in touch. </p>
     </div>
     <form class="_container clearfix">
-      <input class="entry" name="NAME" placeholder="NAME" type="text">
-      <input class="entry entry-2" name="EMAIL" placeholder="EMAIL" type="email">
-      <input class="entry entry-3" name="PHONE" placeholder="PHONE" type="text">
-      <input class="entry entry-4" name="BOUTIQUE NAME" placeholder="BOUTIQUE NAME" type="text">
-      <input class="entry entry-5" name="CITY" placeholder="CITY" type="text">
-      <select class="entry" name="STATE">
-        <option value="STATE">STATE</option>
+      <input class="entry" name="boutique[name]" placeholder="NAME" type="text" required>
+      <input class="entry entry-2" name="boutique[email]" placeholder="EMAIL" type="email" required>
+      <input class="entry entry-3" name="boutique[phone]" placeholder="PHONE" type="text">
+      <input class="entry entry-4" name="boutique[store_name]" placeholder="BOUTIQUE NAME" type="text" required>
+      <input class="entry entry-5" name="boutique[city]" placeholder="CITY" type="text" required>
+      <select class="entry" name="boutique[state]" required>
+        <option value="">STATE</option>
         <option value="Alabama">Alabama</option>
         <option value="Alaska">Alaska</option>
         <option value="Arizona">Arizona</option>
@@ -105,14 +105,14 @@
       showLeftPush = document.getElementById( 'showLeftPush' ),
       body = document.body;
 
-    
+
     showLeftPush.onclick = function() {
       classie.toggle( this, 'active' );
       classie.toggle( body, 'cbp-spmenu-push-toright' );
       classie.toggle( menuLeft, 'cbp-spmenu-open' );
       disableOther( 'showLeftPush' );
     };
-  
+
 
     function disableOther( button ) {
       if( button !== 'showLeftPush' ) {

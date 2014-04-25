@@ -22,7 +22,7 @@
   <div>
     <header class="_container _container-3">
       <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
-      <button class="signin signin-3">Sign In</button>
+      <a class="signin signin-5" href="https://beta.trunkit.com/users/sign_in" target="_target">Sign In</a>
       <button class="menu" id="showLeftPush">Menu</button>
       <div class="background background-7"></div>
     </header>
@@ -87,14 +87,14 @@
       showLeftPush = document.getElementById( 'showLeftPush' ),
       body = document.body;
 
-    
+
     showLeftPush.onclick = function() {
       classie.toggle( this, 'active' );
       classie.toggle( body, 'cbp-spmenu-push-toright' );
       classie.toggle( menuLeft, 'cbp-spmenu-open' );
       disableOther( 'showLeftPush' );
     };
-  
+
 
     function disableOther( button ) {
       if( button !== 'showLeftPush' ) {

@@ -355,6 +355,14 @@ header button {
   color: rgb(0, 0, 0);
 }
 
+header > a.signin {
+  position: absolute;
+  top: 24px;
+  min-height: 24px;
+  letter-spacing: 4px;
+  color: rgb(0, 0, 0);
+}
+
 header img {
   top: 9px;
   left: 0;
