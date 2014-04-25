@@ -6,6 +6,9 @@
   <title>signup</title>
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <script src="js/modernizr.custom.js"></script>
   <script type="text/javascript" src="http://fast.fonts.net/jsapi/6b348b90-50a1-4ea8-b8ea-57b9bba06bb3.js"></script>
 </head>
@@ -96,7 +99,20 @@
       <p class="contact contact-6">Email: Team@Trunkit.com</p>
     </footer>
   </div>
-  <script src="js/jquery-min.js"></script>
+
+  <script>
+  $(function() {
+    $('form').submit(function() {
+      $.fancybox({
+        content: " \
+        <h1>Thank You!</h1>
+        <p>Your sign up has been received, and a member of the team will be in touch shortly!</p>
+        "
+      });
+    });
+  });
+  </script>
+
   <script src="js/signup.js"></script>
   <script src="js/rimages.js"></script>
   <script src="js/classie.js"></script>
