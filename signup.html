@@ -32,7 +32,7 @@
     <div class="heading">
       <p>Fill out the sign up form below and a member from the Trunkit team will be in touch. </p>
     </div>
-    <form action="http://beta.trunkit.com/boutique_sign_up" method="POST" target="_blank" class="_container clearfix">
+    <form action="https://beta.trunkit.com/boutique_sign_up" method="POST" target="_blank" class="_container clearfix">
       <input class="entry" name="boutique[name]" placeholder="NAME" type="text" required>
       <input class="entry entry-2" name="boutique[email]" placeholder="EMAIL" type="email" required>
       <input class="entry entry-3" name="boutique[phone]" placeholder="PHONE" type="text">
@@ -103,12 +103,7 @@
   <script>
   $(function() {
     $('form').submit(function() {
-      $.fancybox({
-        content: " \
-        <h1>Thank You!</h1>
-        <p>Your sign up has been received, and a member of the team will be in touch shortly!</p>
-        "
-      });
+      $.fancybox({ content: "<h1>Thank You!</h1><p>Your sign up has been received, and a member of the team will be in touch shortly!</p>" });
     });
   });
   </script>
