@@ -1221,7 +1221,7 @@ select {
 .scrollblock-12 {
   float: left;
   clear: both;
-  height: 900px;
+  height: 950px;
 }
 
 .scrollblock-4 {
@@ -1807,6 +1807,10 @@ select {
   ._container-13 {
     background-color: rgba(246, 246, 246, 0);
   }
+
+  ._container-12 {
+    margin: 26px auto 0;
+  }
 }
 
 @media(max-width: 755px) {
@@ -2037,7 +2041,7 @@ select {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: 10px auto;
   }
 
   .scrollblock .background-13 {
