@@ -519,14 +519,61 @@ img {
   }
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) 
-{
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  .scrollblock .text-a {
+    font-size: 1.1em;
+    width: 90%;
+    height: 150px;
+  }
 
-.text-a {
-    width: 460px;
-    height: 200px;
+  .image-e,
+  .image-j {
+    width: 50%;
+    margin: 0 25%;
+  }
+
+  .container-g,
+  .container-c {
+    top: 240px;
+  }
+
+  .background-d,
+  .scrollblock-b {
+    height: 710px;
+  }
+
+  .scrollblock-c img {
+    width: 300px;
+  }
+
+  ._container-13 {
+    z-index: 40;
+  }
+
+  .container-a {
+    width: 100%;
+    top: 0;
+  }
+
+  .container-b {
+    width: 100%;
+    left: 0;
+    top: 100px;
+  }
+
+  .container-f {
+    top: 420px;
+    width: 100%;
+  }
+
+  .text-d,
+  .text-c {
+    width: 100%;
+    margin: 0;
+  }
+
+  .text-b {
+    top: 20px;
   }
 }
 

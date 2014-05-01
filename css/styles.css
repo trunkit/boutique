@@ -349,16 +349,14 @@ header {
 
 header button {
   position: absolute;
-  top: 24px;
-  min-height: 24px;
+  top: 26px;
   letter-spacing: 4px;
   color: rgb(0, 0, 0);
 }
 
 header > a.signin {
   position: absolute;
-  top: 24px;
-  min-height: 24px;
+  top: 26px;
   letter-spacing: 4px;
   color: rgb(0, 0, 0);
 }
@@ -1495,7 +1493,6 @@ select {
     margin-left: auto;
   }
 
-  .step-3 img,
   .step-4 img {
     top: 119px;
     left: 0;
@@ -1504,9 +1501,12 @@ select {
     margin-left: auto;
   }
 
-  .step-5 img,
   .step-6 img {
     top: 175px;
+  }
+
+  .step-5 img {
+    top: 100px;
   }
 
   .instruction .number {
@@ -1598,14 +1598,14 @@ select {
 
   .scrollblock .step-3,
   .scrollblock .step-4 {
-    top: 644px;
-    height: 448px;
+    top: 575px;
+    height: 400px;
   }
 
   .scrollblock .step-5,
   .scrollblock .step-6 {
-    top: 1162px;
-    height: 504px;
+    top: 1025px;
+    height: 475px;
   }
 
   .scrollblock .text-1 {
@@ -1636,13 +1636,13 @@ select {
   .scrollblock-7 {
     float: left;
     clear: both;
-    height: 1736px;
+    height: 1400px;
     margin-right: 0;
     margin-left: 0;
   }
 
   .scrollblock-8 {
-    height: 1736px;
+    height: 1500px;
   }
 
   .step .instruction-1,
@@ -1824,6 +1824,11 @@ select {
 
   .step img {
     height: auto;
+    left: 0;
+    right: 0;
+    width: 440px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   ._container .contact-2,
@@ -1839,12 +1844,12 @@ select {
   .scrollblock .background-8,
   .scrollblock .background-9,
   .scrollblock .heading-1,
-  .step-1 img,
-  .step-3 img {
+  {
     margin-right: auto;
     margin-left: auto;
   }
 
+  .step-1 img,
   .step-2 img,
   .step-4 img,
   .step-6 img {
@@ -1853,6 +1858,10 @@ select {
     width: 440px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .step-3 img {
+    margin: 120px auto;
   }
 
   .number .box {
@@ -1934,14 +1943,7 @@ select {
     width: 440px;
   }
 
-  .scrollblock .text-1 {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-
+  .scrollblock .text-1,
   .scrollblock .text-2 {
     top: 0;
     bottom: 0;
@@ -1952,15 +1954,7 @@ select {
     font-size: 1.563em;
   }
 
-  .scrollblock .valueprop-1 {
-    top: 216px;
-    left: 0;
-    right: 0;
-    width: 500px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
+  .scrollblock .valueprop-1,
   .scrollblock .valueprop-2 {
     top: 170px;
     left: 0;
@@ -1970,15 +1964,7 @@ select {
     margin-left: auto;
   }
 
-  .scrollblock .valuepropsub-1 {
-    top: 324px;
-    left: 0;
-    right: 0;
-    width: 500px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
+  .scrollblock .valuepropsub-1,
   .scrollblock .valuepropsub-2 {
     top: 278px;
     left: 0;
@@ -2199,4 +2185,282 @@ select {
     position: relative;
     z-index: 0;
   }
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  body {
+    width: 100%;
+  }
+
+  .scrollblock {
+    width: 100%;
+  }
+  .scrollblock .scrollblock-1 {
+    width: 100%;
+  }
+
+  .logo {
+    margin-top: 10px;
+    width: 40%;
+  }
+
+  .menu {
+    font-size: 12px;
+    top: 28px;
+    left: 2%;
+  }
+
+  header > a.signin {
+    font-size: 12px;
+    top: 28px;
+  }
+
+  ._container .signin {
+    right: 2%;
+  }
+
+  .scrollblock-1 button,
+  .scrollblock-2 button,
+  .scrollblock-3 button,
+  .scrollblock-9 button {
+    left: 0;
+    right: 0;
+    width: 225px;
+    height: 50px;
+    margin: 0 auto;
+    font-family: "bebasregular";
+    font-size: 1.15em;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+
+  .scrollblock .tagline {
+    top: 140px;
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .signinbutton {
+    top: 435px;
+  }
+
+  .scrollblock .signinbutton-2,
+  .scrollblock .signinbutton-3,
+  .scrollblock .signinbutton-4 {
+    top: 427px;
+  }
+
+  .scrollblock {
+    width: 100%;
+  }
+
+  .scrollblock .container-1 {
+    width: 90%
+  }
+
+  .container .valueprop {
+    width: 100%;
+  }
+
+  .valueprop .valuetitle {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .valueprop .moreinfo {
+    top: 40px;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .valueprop .learnmorearrow {
+    top: 110px;
+  }
+
+  .scrollblock .scrollblock-11 {
+    width: 300px;
+  }
+
+  .scrollblock-11 {
+    height: 2920px
+  }
+
+  .container ._container .container-2 {
+    width: 300px;
+  }
+
+  .scrollblock .container-2 {
+    width: 300px;
+  }
+
+  .container .heading {
+    font-size: 18px;
+    width: 300px;
+  }
+
+  .container .collage {
+    width: 100%;
+  }
+
+  .collagepic-6 {
+    left: 37px;
+  }
+
+  .collagepic-5 {
+    top: 1376px;
+    left: 37px;
+  }
+
+  .collage .collagepic-4 {
+    left: 37px;
+  }
+
+  .collagepic-3 {
+    top: 1684px;
+    left: 37px;
+  }
+
+  .collage .collagepic-2 {
+    top: 2292px;
+    left: 37px;
+  }
+
+  .collagepic-1 {
+    left: 37px;
+  }
+
+  .scrollblock .valueprop-1,
+  .scrollblock .valueprop-2,
+  .scrollblock .valueprop-6 {
+    top: 140px;
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .scrollblock .valuepropsub-1,
+  .scrollblock .valuepropsub-2,
+  .scrollblock .valuepropsub-3 {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .scrollblock .text-1,
+  .scrollblock .text-2,
+  .scrollblock .text-a {
+    font-size: 1.1em;
+    width: 90%;
+  }
+
+  .instruction .text-3,
+  .instruction .text-4, 
+  .instruction .text-5,
+  .instruction .text-6,
+  .instruction .text-7,
+  .instruction .text-8 {
+    font-size: 1em;
+    width: 200px;
+  }
+
+  .instruction .text-4 {
+    top: -3px;
+  }
+
+  .instruction .text-7 {
+    top: 18px;
+  }
+
+  .step-1 img,
+  .step-2 img,
+  .step-3 img,
+  .step-4 img,
+  .step-5 img,
+  .step-6 img,
+  .scrollblock-10 img,
+  .step .instruction-1,
+  .step .instruction-2,
+  .step .instruction-3,
+  .step .instruction-4,
+  .step .instruction-5,
+  .step .instruction-6 {
+    width: 300px;
+  }
+
+  .scrollblock-10 img {
+    top: 110px;
+  }
+
+  .scrollblock .step,
+  .scrollblock .step-1,
+  .scrollblock .step-2,
+  .scrollblock .step-4, 
+  .scrollblock .step-6 {
+    width: 100%;
+    height: 300px;
+  }
+
+  .scrollblock .step-3,
+  .scrollblock .step-4 {
+    top: 500px;
+  }
+
+  .scrollblock .step-5,
+  .scrollblock .step-6 {
+    top: 860px;
+  }
+
+  .scrollblock .scrollblock-7,
+  .scrollblock .scrollblock-8,
+  .scrollblock .scrollblock-10,
+  .scrollblock .scrollblock-12,
+  .scrollblock .heading-1,
+  .scrollblock .heading-2,
+  .scrollblock .heading-3 {
+    width: 100%;
+  }
+
+  .scrollblock-7 {
+    height: 1175px;
+  }
+
+  .scrollblock-8 {
+    height: 1300px;
+  }
+
+  .step .instruction {
+    margin: 0 auto;
+  }
+
+  .number-1 {
+    left:0px;
+  }
+
+  .scrollblock-10 {
+    height: 300px;
+  }
+
+  .stats {
+    width: 290px;
+  }
+
+  .heading-11 {
+    margin-top: 190px;
+  }
+
+  .heading-z {
+    top: 90px;
+  }
+
+  .heading p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: .65em;
+  }
+
+  input,
+  select,
+  form button {
+    width: 300px;
+    border-radius: 0px;
+  }
+
 }
