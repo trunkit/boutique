@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/modernizr.custom.js"></script>
+  <!--Start of Zopim Live Chat Script-->
+  <script type="text/javascript">
+  window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+  d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+  _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+  $.src='//v2.zopim.com/?25sKnWbR8ruGpKIMd59cqsKQHtgkeqHM';z.t=+new Date;$.
+  type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+  </script>
+  <!--End of Zopim Live Chat Script-->
 </head>
 <body class="body index clearfix cbp-spmenu-push">
   <!--http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/-->
@@ -22,13 +31,13 @@
   <div>
     <header class="_container _container-1">
       <a href="index.html"><img class="logo" src="images/LogoBlack.png"></a>
-      <a class="signin signin-5" href="https://beta.trunkit.com/users/sign_in" target="_target">Sign In</a>
+      <a class="signin signin-5" href="https://beta.trunkit.com/users/sign_in" target="_target">Log In</a>
       <button class="menu" id="showLeftPush">Menu</button>
       <div class="background background-2"></div>
     </header>
     <div class="scrollblock scrollblock-1">
       <button onClick="window.location='signup.html';" class="getinvited getinvited-1 js-get-invited" type="submit">Sign Up</button>
-      <button onClick="window.location='https://beta.trunkit.com/users/sign_in'" class="signinbutton signinbutton-1">Sign In</button>
+      <button onClick="window.location='https://beta.trunkit.com/users/sign_in'" class="signinbutton signinbutton-1">Log In</button>
       <div class="tagline">The end of your inventory management problems.</div>
       <div class="background background-1"></div>
     </div>
@@ -132,5 +141,6 @@
     return (elem.toString() == '[object HTMLButtonElement]');
     }
   </script>
+
 </body>
 </html>
