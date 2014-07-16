@@ -377,13 +377,14 @@ img {
 .scrollblock-b {
   z-index: 32;
   height: 432px;
+  background-color: #fff;
 }
 
 .scrollblock-c {
   clear: both;
-  z-index: 8;
+  z-index: 40;
   height: 682px;
-  margin-top: -70px;
+  margin-top: 0px;
 }
 
 .text-a {
