@@ -970,8 +970,8 @@ select {
   left: 238px;
   z-index: 6;
   height: 300px;
-  background-image: url('../images/TheBluesJeanBar1.jpg');
-  background-size: 500px auto;
+  background-image: url('../images/pinklagoon.png');
+  background-size: 250px auto;
   background-position: left bottom;
 }
 
@@ -982,7 +982,7 @@ select {
   left:0;
   height:296px;
   width:226px;
-  background:url('../images/bluesjeanbarcover.png') bottom center;
+  background:url('../images/pinkLagoonCover.png') bottom center;
   opacity: 0;
   -webkit-transition: opacity 0.5s;
   -moz-transition:    opacity 0.5s;
