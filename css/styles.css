@@ -307,6 +307,11 @@ body {
   z-index: 10;
 }
 
+.step-8 img {
+  left: 0;
+  z-index: 10;
+}
+
 button {
   display: block;
 }
@@ -1136,6 +1141,14 @@ select {
   height: 150px;
 }
 
+.instruction-8 {
+  top: 110px;
+  left: 54.5908183632%;
+  z-index: 9;
+  width: 45.4091816367%;
+  height: 150px;
+}
+
 .learnmorearrow-1 {
   z-index: 32;
 }
@@ -1219,7 +1232,7 @@ select {
 .scrollblock-12 {
   float: left;
   clear: both;
-  height: 965px;
+  height: 990px;
 }
 
 .scrollblock-4 {
@@ -1247,7 +1260,7 @@ select {
 .scrollblock-8 {
   float: left;
   clear: both;
-  height: 1512px;
+  height: 1750px;
 }
 
 .scrollblock-9 {
@@ -1280,6 +1293,12 @@ select {
   top: 1058px;
   right: 0;
   z-index: 11;
+}
+
+.step-8 {
+  top: 1400px;
+  left: 0;
+  z-index: 18;
 }
 
 .text-1 {
@@ -1344,6 +1363,12 @@ select {
 
 .text-8 {
   top: 0;
+  left: 95px;
+  z-index: 8;
+}
+
+.text-10 {
+  top: -5px;
   left: 95px;
   z-index: 8;
 }
@@ -1509,6 +1534,10 @@ select {
     top: 100px;
   }
 
+  .step-8 img {
+    top: 40px;
+  }
+
   .instruction .number {
     width: 80px;
   }
@@ -1608,6 +1637,11 @@ select {
     height: 475px;
   }
 
+  .scrollblock .step-8 {
+    top: 1550px;
+    height: 475px;
+  }
+
   .scrollblock .text-1 {
     top: 0;
     bottom: 0;
@@ -1642,7 +1676,7 @@ select {
   }
 
   .scrollblock-8 {
-    height: 1500px;
+    height: 1950px;
   }
 
   .step .instruction-1,
@@ -1653,7 +1687,8 @@ select {
   .step .instruction-3,
   .step .instruction-4,
   .step .instruction-5,
-  .step .instruction-6 {
+  .step .instruction-6,
+  .step .instruction-8 {
     top: 1px;
     width: 455px;
   }
@@ -1852,7 +1887,8 @@ select {
   .step-1 img,
   .step-2 img,
   .step-4 img,
-  .step-6 img {
+  .step-6 img
+  .step-8 img {
     left: 0;
     right: 0;
     width: 440px;
@@ -1902,6 +1938,12 @@ select {
     font-size: 1.25em;
   }
 
+  .instruction .text-10 {
+    top: 0px;
+    width: 325px;
+    font-size: 1.25em;
+  }
+
   .number .box-1,
   .number .box-2 {
     z-index: 19;
@@ -1939,7 +1981,8 @@ select {
 
   .scrollblock .step-2,
   .scrollblock .step-4,
-  .scrollblock .step-6 {
+  .scrollblock .step-6,
+  .scrollblock .step-8 {
     width: 440px;
   }
 
@@ -1977,7 +2020,8 @@ select {
 
   .step .instruction-2,
   .step .instruction-4,
-  .step .instruction-6 {
+  .step .instruction-6,
+  .step .instruction-8 {
     width: 420px;
   }
 
@@ -2375,13 +2419,15 @@ select {
   .step-4 img,
   .step-5 img,
   .step-6 img,
+  .step-8 img,
   .scrollblock-10 img,
   .step .instruction-1,
   .step .instruction-2,
   .step .instruction-3,
   .step .instruction-4,
   .step .instruction-5,
-  .step .instruction-6 {
+  .step .instruction-6,
+  .step .instruction-8 {
     width: 300px;
   }
 
@@ -2393,7 +2439,8 @@ select {
   .scrollblock .step-1,
   .scrollblock .step-2,
   .scrollblock .step-4, 
-  .scrollblock .step-6 {
+  .scrollblock .step-6,
+  .scrollblock .step-8 {
     width: 100%;
     height: 300px;
   }
@@ -2406,6 +2453,10 @@ select {
   .scrollblock .step-5,
   .scrollblock .step-6 {
     top: 860px;
+  }
+
+  .scrollblock .step-8 {
+    top: 1050px;
   }
 
   .scrollblock .scrollblock-7,
@@ -2423,7 +2474,7 @@ select {
   }
 
   .scrollblock-8 {
-    height: 1300px;
+    height: 1950px;
   }
 
   .step .instruction {
